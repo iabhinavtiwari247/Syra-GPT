@@ -2,6 +2,10 @@
 
 A beautiful, interactive PWA where you chat face-to-face with **Syra** — an AI companion and assistant with a warm anime persona. Talk to her with your voice or type messages, and she replies in the same language you use.
 
+<img width="1034" height="677" alt="Screenshot 2026-06-09 021454" src="https://github.com/user-attachments/assets/a434095f-a207-4a6f-8067-87dd941d97a4" />
+
+
+
 
 ## Features
 

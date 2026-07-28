@@ -1,129 +1,111 @@
-# Syra-GPT
-# Syra-GPT 
+# SyraGPT
 
-AN Anime Avatar Girl AI Chatbot
+A beautiful, interactive PWA where you chat face-to-face with **Syra** — an AI companion and assistant with a warm anime persona. Talk to her with your voice or type messages, and she replies in the same language you use.
 
-![License](https://img.shields.io/badge/license-Apache-2.0-blue.svg) ![Version](https://img.shields.io/badge/version-1.0.0-green.svg) ![Node](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Reference](#api-reference)
-- [Configuration](#configuration)
-- [Screenshots](#screenshots)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Running Tests](#running-tests)
-- [Deployment](#deployment)
-- [FAQ](#faq)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- **Voice Companion Mode** — real two-way voice chat using Web Speech API (speech recognition + female TTS) in 20+ languages
+- **Assistant Mode** — threaded chat with file attachments, streaming responses, and markdown support
+- **Multilingual by default** — English, Hindi, Hinglish, and 100+ languages auto-detected
+- **Anime persona** — Syra has a playful, caring personality with a cherry-blossom sunset aesthetic
+- **Real Google sign-in** — secure authentication via Cloud
+- **Progressive Web App** — installable on mobile and desktop, with offline shell caching
 
-### Tech Stack
+---
 
-- **JavaScript**
-- **Node.js**
-- **React**
+## Tech Stack
 
-## Installation
+- **Framework:** TanStack Start (React 19, full-stack SSR/SSG)
+- **Build tool:** Vite 7
+- **Styling:** Tailwind CSS v4 + custom glassmorphism theme
+- **Backend:** Cloud (Supabase) — Auth, Database, Storage
+- **AI:** Google Gemini
+- **PWA:** Web App Manifest + Service Worker
+
+---
+
+## Project Structure
+
+```
+public/              # PWA manifest, service worker, icons, robots
+src/
+  components/        # Reusable UI (Petals, etc.)
+  hooks/             # Mobile detection hook
+  integrations/      # Supabase and Lovable Cloud clients
+  lib/               # AI gateway, config, utilities
+  routes/            # TanStack Start file-based routes
+    __root.tsx       # Root layout
+    index.tsx        # Landing page
+    _authenticated/  # Protected routes
+      app/index.tsx  # Mode selection
+      companion.tsx  # Voice chat
+      chat/          # Threaded assistant chat
+  styles.css         # Global theme and animations
+  start.ts           # Start instance configuration
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (recommended)
+- A Cloud backend connected to the project
+
+### Install dependencies
 
 ```bash
-git clone https://github.com/iabhinavtiwari273/syra-gpt-.git
-cd syra-gpt-
-npm install my-awesome-project
+bun install
 ```
 
-## Usage
+### Run the development server
 
 ```bash
-npm start
+bun dev
 ```
 
-Describe how to use the project here.
+Open http://localhost:8080 in your browser.
 
-## API Reference
-
-#### Get all items
-
-```http
-GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-## Configuration
-
-Create a `.env` file in the root directory:
-
-```env
-PORT=3000
-DATABASE_URL=your_database_url
-API_KEY=your_api_key
-```
-
-## Screenshots
-
-![Screenshot](https://via.placeholder.com/800x400?text=Screenshot)
-
-## Roadmap
-
-- [x] Feature 1
-- [x] Feature 2
-- [ ] Feature 3 (upcoming)
-- [ ] Feature 4 (planned)
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Running Tests
+### Build for production
 
 ```bash
-npm test
+bun run build
 ```
 
-## Deployment
+---
 
-```bash
-npm run build
-npm run deploy
-```
+## Key Routes
 
-## FAQ
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page and sign-in |
+| `/app` | Mode selection (Companion / Assistant) |
+| `/companion` | Voice-to-voice chat with Syra |
+| `/chat` | List of assistant chat threads |
+| `/chat/$threadId` | Individual assistant conversation |
+| `/api/chat` | Server endpoint that streams AI responses |
 
-#### Question 1
+---
 
-Answer 1
+## PWA
 
-#### Question 2
+SyraGPT is designed as an installable Progressive Web App:
 
-Answer 2
-
-## Acknowledgments
-
-- [Resource 1](https://example.com)
-- [Resource 2](https://example.com)
+- `public/manifest.webmanifest` defines app metadata and theme colors
+- `public/sw.js` caches the app shell for offline use
+---
 
 ## License
 
-This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
+All rights reserved by the project owner.
 
 ---
+
+## Credits
+
+- Character: **Syra** — your anime AI companion
+- AI: Google Gemini.
 
 Made with ❤ by [iabhinavtiwari273](https://github.com/iabhinavtiwari273)

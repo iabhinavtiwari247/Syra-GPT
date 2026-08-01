@@ -4,7 +4,7 @@ A beautiful, interactive PWA where you chat face-to-face with **Syra** — an AI
 
 <img width="1034" height="677" alt="Syra1" src="https://github.com/user-attachments/assets/804b64b1-77ac-4368-8bdc-3aca74247b2f" />
 <img width="1908" height="950" alt="image" src="https://github.com/user-attachments/assets/94824b94-812b-45fb-8706-dcfb28124799" />
-<vid width="1034" height="950" alt="video" src="https://github.com/user-attachments/assets/6627129b-2377-4807-99e5-f36bee5069d3" />
+https://github.com/user-attachments/assets/6627129b-2377-4807-99e5-f36bee5069d3
 
 
 
